@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>نموذج التسجيل مع رقم مرجعي</title>
+  <link rel="stylesheet" href="1.css" />
+  </head>
+<body>
+  <form id="subscriptionForm">
+    <label>الاسم الكامل:</label>
+    <input type="text" id="name" required />
+
+    <label>رقم الجوال:</label>
+    <input type="tel" id="phone" />
+
+    <label>مبلغ الاشتراك:</label>
+    <input type="number" id="amount" required />
+
+    <label>اختيار العملة:</label>
+    <select id="currency" required>
+      <option value="ريال">ريال</option>
+      <option value="دولار">دولار</option>
+      <option valu="بيتكوين">
+        بيتكوين
+      </option>
+      <option value="الأيثريوم ">
+        الأيثريوم 
+      </ETH>
+    </select>
+     <select name="service">
+      <option value="">اختر الخدمة المطلوبة</option>
+      <option>إدارة محافظ</option>
+      <option>بحوث السوق</option>
+      <option>تخطيط مالي</option>
+    </select>
+
+    <label>طريقة الدفع:</label>
+    <select id="paymentMethod" required onchange="toggleFields()">
+      <option value="">-- اختر --</option>
+      <option value="wallet">محفظة</option>
+      <option value="bank">حساب بنكي</option>
+    </select>
+
+    <div id="walletField" style="display: none;">
+      <label>رابط المحفظة:</label>
+      <input type="url" id="walletLink" />
+    </div>
+
+    <div id="bankField" style="display: none;">
+      <label>رقم الحساب البنكي:</label>
+      <input type="text" id="bankAccount" />
+    </div>
+
+    <div id="refField" style="display: none;">
+      <label>الرقم المرجعي للتحويل:</label>
+      <input type="text" id="refNumber" placeholder="مثلاً: 84828391" />
+    </div>
+
+    <button type="submit">إرسال</button>
+
+  <script src="1.js"></script>
+    <p id="responseMsg"></p>
+  </form>
+
+  <script src="1.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+}
+
+#responseMsg {
+  color: green;
+  font-weight: bold;
+}
+
+
+#responseMsg {
+  font-weight: bold;
+  color: green;
+}
