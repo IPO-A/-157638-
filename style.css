@@ -93,3 +93,87 @@ footer{margin-top:40px;padding:28px 0;color:var(--muted);text-align:center}
         .telegram-button {
             background-color: #0088cc;
         }
+
+        :root{
+  --brand:#1d6d8f;      /* لون العنوان */
+  --ink:#23303a;        /* لون النص */
+  --muted:#6b7a87;      /* نص ثانوي */
+  --card:#e9ecef;       /* خلفية الصندوق الرمادي */
+  --paper:#ffffff;      /* خلفية الصفحة */
+  --primary:#006bb3;    /* لون الروابط */
+  --primary-ink:#004d80;/* لون الروابط عند التحويم */
+  --radius:16px;        /* نصف القطر العام */
+  --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font: 400 16px/1.7 system-ui, -apple-system, Segoe UI, Roboto, "Noto Kufi Arabic", "Tajawal", Arial, sans-serif;
+}
+.wrap{max-width: 960px; margin: 48px auto; padding: 0 20px}
+
+.section{
+  background: var(--paper);
+  border-radius: var(--radius);
+}
+.title{
+  color: var(--brand);
+  font-weight: 800;
+  font-size: clamp(22px,4vw,32px);
+  margin: 0 0 16px;
+  letter-spacing:.4px
+}
+
+.card{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px;
+  overflow: hidden;
+}
+
+.rows{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+.row{ display: contents; }
+.cell{
+  background:#f7f9fb;
+  padding:14px 16px;
+  border-radius:12px;
+  font-weight:600;
+}
+.cell.key{ color: var(--ink) }
+.cell.val{ text-align:left }
+[dir="rtl"] .cell.val{ text-align:right }
+
+a.link{ color: var(--primary); text-decoration: none; font-weight:700 }
+a.link:hover{ color: var(--primary-ink); text-decoration: underline }
+
+.divider{ height:16px }
+
+.bottom{
+  background:#d9dde2;
+  border-radius:12px;
+  padding: 18px 16px;
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap: 12px 24px;
+  align-items:start;
+}
+.bottom .label{ font-weight:800 }
+.bottom .text{ color: var(--ink) }
+
+.note{
+  margin:18px 4px 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+@media (max-width:720px){
+  .rows{ grid-template-columns: 1fr; }
+  .cell.val{ text-align:inherit }
+  .bottom{ grid-template-columns: 1fr; }
+}
