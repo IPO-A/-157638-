@@ -142,9 +142,16 @@ body{
 .cell{
   background:#f7f9fb;
   padding:14px 16px;
-  border-radius:12px;
+  border-radius:14px;
   font-weight:600;
 }
+.cell.key{ color: var(--ink) }
+.cell.val{ text-align:left }
+[dir="rtl"] .cell.val{ text-align:right }
+
+a.link{ color: var(--primary); text-decoration: none; font-weight:700 }
+a.link:hover{ color: var(--primary-ink); text-decoration: underline }
+
 .cell.key{ color: var(--ink) }
 .cell.val{ text-align:left }
 [dir="rtl"] .cell.val{ text-align:right }
