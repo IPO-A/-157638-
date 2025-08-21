@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://A _COMPANY.github.io/sitemap.xml
