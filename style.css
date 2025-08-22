@@ -142,16 +142,9 @@ body{
 .cell{
   background:#f7f9fb;
   padding:14px 16px;
-  border-radius:14px;
+  border-radius:12px;
   font-weight:600;
 }
-.cell.key{ color: var(--ink) }
-.cell.val{ text-align:left }
-[dir="rtl"] .cell.val{ text-align:right }
-
-a.link{ color: var(--primary); text-decoration: none; font-weight:700 }
-a.link:hover{ color: var(--primary-ink); text-decoration: underline }
-
 .cell.key{ color: var(--ink) }
 .cell.val{ text-align:left }
 [dir="rtl"] .cell.val{ text-align:right }
@@ -183,4 +176,45 @@ a.link:hover{ color: var(--primary-ink); text-decoration: underline }
   .rows{ grid-template-columns: 1fr; }
   .cell.val{ text-align:inherit }
   .bottom{ grid-template-columns: 1fr; }
+}
+.section{
+  background: var(--paper);
+  border-radius: var(--radius);
+}
+
+.title{
+  color: var(--brand);
+  font-weight: 800;
+  font-size: clamp(20px, 4vw, 32px); /* يتغير حسب حجم الشاشة */
+  margin-bottom: 16px;
+  text-align: center; }
+  /* القائمة */
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+/* زر القائمة ☰ */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* مخفي على الكمبيوتر */
+}
+
+/* للهواتف */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* نخفي القائمة افتراضيًا */
+    flex-direction: column;
+    background: #eee;
+    padding: 10px;
+  }
+
+  .nav.active {
+    display: flex; /* تظهر عند الضغط */
+  }
+
+  .menu-icon {
+    display: block; /* يظهر زر ☰ */
+  }
 }
