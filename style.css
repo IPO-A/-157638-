@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0b57a4;
+    color: black;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 📱 الهاتف */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .nav a {
+        padding: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;      /* بدل حجم ثابت */
+  max-width: 1200px; /* للكمبيوتر */
+  margin: auto;
+}
+
+img {
+  max-width: 100%;  /* يخلي الصورة تصغر وتكبر حسب الشاشة */
+  height: auto;
+}
+body {
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  text-align: right;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f2f2f2;
+  padding: 10px;
+}
+
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* نخفيه في الكمبيوتر */
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: blue;
+  text-decoration: none;
+  margin: 5px;
+}
+
+/* للهواتف */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /* يظهر زر ☰ */
+  }
+
+  .nav-links {
+    display: none;       /* نخفي القائمة */
+    flex-direction: column;
+    background: #eee;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;       /* تظهر القائمة عند الضغط */
+  }
+}
