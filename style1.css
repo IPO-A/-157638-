@@ -1,37 +1,14 @@
-:root{
-  --bg:#f6f8fb;
-  --primary:#0b57a4; /* أزرق احترافي */
-  --accent:#f6b042;  /* لون مساعد */
-  --muted:#6b7280;
-  --card:#ffffff;
-  font-family: 'Cairo', sans-serif;
-
-  --brand:#1d6d8f;       /* لون العنوان */
-  --ink:#23303a;         /* لون النص */
-  --primary-ink:#004d80; /* لون الروابط عند التحويم */
-  --radius:16px;         /* نصف القطر العام */
-  --shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.6;
-  font:400 16px/1.7 "Cairo","Tahoma",sans-serif;
-  direction:rtl;
-  text-align:right;
-}
-
-.container{
-  width:90%;
-  max-width:1200px;
-  margin:auto;
-  padding:20px;
-}
-
-/* NAV */
+    :root{
+      --bg:#f6f8fb;
+      --primary:#0b57a4; /* أزرق احترافي */
+      --accent:#f6b042; /* لون مساعد */
+      --muted:#6b7280;
+      --card:#ffffff;
+      font-family: 'Cairo', sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0b1220;line-height:1.6}
+    .container{max-width:1200px;margin:0 auto;padding:24px}/* NAV */
 .navbar{background:linear-gradient(90deg,#ffffffcc, #ffffffcc);backdrop-filter:blur(6px);position:sticky;top:0;z-index:50;border-bottom:1px solid #e6e9ee}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px}
 .brand{display:flex;align-items:center;gap:12px}
@@ -90,45 +67,154 @@ footer{margin-top:40px;padding:28px 0;color:var(--muted);text-align:center}
   .projects{grid-template-columns:1fr}
 }
 
-/* إضافات */
-.box {
-  padding:20px;
-  margin:20px 0;
-  border-radius:8px;
-  background-color:white;
-  box-shadow:0 4px 6px rgba(0,0,0,0.1);
-  text-align:center;
-  font-weight:bold;
-}
-.working-hours {
-  text-align:center;
-  margin-top:30px;
-  font-size:16px;
-  font-weight:bold;
-}
-.contact-button {
-  padding:10px 20px;
-  background-color:#25D366;
-  color:white;
-  border-radius:5px;
-  text-decoration:none;
-  margin:5px;
-}
-.telegram-button { background-color:#0088cc; }
+    .box {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            font-weight: bold;
+        }
+        .working-hours {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .contact-button {
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px;
+        }
+        .telegram-button {
+            background-color: #0088cc;
+        }
 
-/* NAV (للهواتف) */
+        :root{
+  --brand:#1d6d8f;      /* لون العنوان */
+  --ink:#23303a;        /* لون النص */
+  --muted:#6b7a87;      /* نص ثانوي */
+  --card:#e9ecef;       /* خلفية الصندوق الرمادي */
+  --paper:#ffffff;      /* خلفية الصفحة */
+  --primary:#006bb3;    /* لون الروابط */
+  --primary-ink:#004d80;/* لون الروابط عند التحويم */
+  --radius:16px;        /* نصف القطر العام */
+  --shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font: 400 16px/1.7 system-ui, -apple-system, Segoe UI, Roboto, "Noto Kufi Arabic", "Tajawal", Arial, sans-serif;
+}
+.wrap{max-width: 960px; margin: 48px auto; padding: 0 20px}
+
+.section{
+  background: var(--paper);
+  border-radius: var(--radius);
+}
+.title{
+  color: var(--brand);
+  font-weight: 800;
+  font-size: clamp(22px,4vw,32px);
+  margin: 0 0 16px;
+  letter-spacing:.4px
+}
+
+.card{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px;
+  overflow: hidden;
+}
+
+.rows{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+.row{ display: contents; }
+.cell{
+  background:#f7f9fb;
+  padding:14px 16px;
+  border-radius:12px;
+  font-weight:600;
+}
+.cell.key{ color: var(--ink) }
+.cell.val{ text-align:left }
+[dir="rtl"] .cell.val{ text-align:right }
+
+a.link{ color: var(--primary); text-decoration: none; font-weight:700 }
+a.link:hover{ color: var(--primary-ink); text-decoration: underline }
+
+.divider{ height:16px }
+
+.bottom{
+  background:#d9dde2;
+  border-radius:12px;
+  padding: 18px 16px;
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap: 12px 24px;
+  align-items:start;
+}
+.bottom .label{ font-weight:800 }
+.bottom .text{ color: var(--ink) }
+
+.note{
+  margin:18px 4px 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+@media (max-width:720px){
+  .rows{ grid-template-columns: 1fr; }
+  .cell.val{ text-align:inherit }
+  .bottom{ grid-template-columns: 1fr; }
+}
+.section{
+  background: var(--paper);
+  border-radius: var(--radius);
+}
+
+.title{
+  color: var(--brand);
+  font-weight: 800;
+  font-size: clamp(20px, 4vw, 32px); /* يتغير حسب حجم الشاشة */
+  margin-bottom: 16px;
+  text-align: center; }
+  /* القائمة */
 .nav {
-  display:flex;
-  gap:15px;
+  display: flex;
+  gap: 15px;
 }
+
+/* زر القائمة ☰ */
 .menu-icon {
-  font-size:24px;
-  cursor:pointer;
-  display:none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* مخفي على الكمبيوتر */
 }
-@media (max-width:768px){
-  .nav{display:none;flex-direction:column;background:#eee;padding:10px}
-  .nav.active{display:flex}
-  .menu-icon{display:block}
-  .nav a{padding:10px;border-bottom:1px solid #ddd}
+
+/* للهواتف */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* نخفي القائمة افتراضيًا */
+    flex-direction: column;
+    background: #eee;
+    padding: 10px;
+  }
+
+  .nav.active {
+    display: flex; /* تظهر عند الضغط */
+  }
+
+  .menu-icon {
+    display: block; /* يظهر زر ☰ */
+  }
 }
